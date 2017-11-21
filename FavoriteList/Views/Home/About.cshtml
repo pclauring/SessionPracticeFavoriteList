@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+<table class="table">
+    <tr>
+        <th>American Idiot - Green Day</th>
+        <th><a href="/Home/AddToFavoriteList?Name=American Idiot - Green Day">Add to favorite list</a></th>
+    </tr>
+    <tr>
+        <th>23 - Blink 182</th>
+        <th><a href="/Home/AddToFavoriteList?Name=23 - Blink 182">Add to favorite list</a></th>
+    </tr>
+    <tr>
+        <th>I Can't Get No Satisfaction - Rolling Stones</th>
+        <th><a href="/Home/AddToFavoriteList?Name=I Can't Get No Satisfaction - Rolling Stones">Add to favorite list</a></th>
+    </tr>
+    <tr>
+        <th>Despacito</th>
+        <th><a href="/Home/AddToFavoriteList?Name=Despacito">Add to favorite list</a></th>
+    </tr>
+    <tr>
+        <th>Feel It Coming - The Weeknd</th>
+        <th><a href="/Home/AddToFavoriteList?Name=Feel It Coming - The Weeknd">Add to favorite list</a></th>
+    </tr>
+    <tr>
+        <th>All I Want For Christmas</th>
+        <th><a href="/Home/AddToFavoriteList?Name=All I Want For Christmas">Add to favorite list</a></th>
+    </tr>
+    <tr>
+        <th>Sweater Song - Weezer</th>
+        <th><a href="/Home/AddToFavoriteList?Name=Sweater Song - Weezer">Add to favorite list</a></th>
+    </tr>
+</table>
+
+    @if (ViewBag.FavList != null)
+    {
+    <h3>Favorite List</h3>
+<br/><table class="table">
+    @foreach (var song in ViewBag.FavList)
+    {
+        <tr><th>@song</th></tr>
+    }
+    
+</table>
+    }
